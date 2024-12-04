@@ -1,0 +1,8 @@
+\item \points{2d}
+
+In the infinite-horizon discounted setting, is it possible to choose a fixed value of $\gamma \in [0, 1)$ such that the optimal policy starting from $s = 3$ never fully stocks the inventory? You do not need to propose a specific value, but simply explain your reasoning either way.
+
+🐍
+import re
+with open('submission.tex') as f: print((re.search(r'% <SCPD_SUBMISSION_TAG>_2d(.*?)% <SCPD_SUBMISSION_TAG>_2d', f.read(), re.DOTALL)).group(1))
+🐍

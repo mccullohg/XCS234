@@ -1,0 +1,8 @@
+\item \points{1f}
+
+Run both methods on RiverSwim with a \textsc{weak} current strength and find the largest discount factor (\textbf{only} up to two decimal places) such that an optimal agent starting in the initial far-left state (state $s_1$ in Figure \ref{fig:riverswim}) \textbf{does not} swim up the river (that is, does not go \textsc{RIGHT}). Using the value you find, interpret why this behavior makes sense. Now repeat this for RiverSwim with \textsc{medium} and \textsc{strong} currents, respectively. Describe and explain the changes in optimal values and discount factors you obtain both quantitatively and qualitatively.
+
+🐍
+import re
+with open('submission.tex') as f: print((re.search(r'% <SCPD_SUBMISSION_TAG>_1f(.*?)% <SCPD_SUBMISSION_TAG>_1f', f.read(), re.DOTALL)).group(1))
+🐍

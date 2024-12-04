@@ -1,0 +1,8 @@
+\item \points{3a}
+
+Explain why the optimal policy for the AI car is not to merge onto the highway.
+
+🐍
+import re
+with open('submission.tex') as f: print((re.search(r'% <SCPD_SUBMISSION_TAG>_3a(.*?)% <SCPD_SUBMISSION_TAG>_3a', f.read(), re.DOTALL)).group(1))
+🐍

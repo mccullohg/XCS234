@@ -1,0 +1,8 @@
+\item \points{2a}
+
+Starting from the initial state $s = 3$, it possible to a choose a value of $H$ that results in the optimal policy taking both buy and sell steps during its execution? Explain why or why not.
+
+🐍
+import re
+with open('submission.tex') as f: print((re.search(r'% <SCPD_SUBMISSION_TAG>_2a(.*?)% <SCPD_SUBMISSION_TAG>_2a', f.read(), re.DOTALL)).group(1))
+🐍

@@ -1,0 +1,8 @@
+\item \points{3b}
+
+Note this behavior is not aligned with the true reward function. Share some ideas about alternate reward functions (that are not minimizing commute) that might still be easier to optimize, but would not result in the AI car never merging. Your answer should be 2-5 sentences and can include equations: there is not a single answer and reasonable solutions will be given full credit. 
+
+🐍
+import re
+with open('submission.tex') as f: print((re.search(r'% <SCPD_SUBMISSION_TAG>_3b(.*?)% <SCPD_SUBMISSION_TAG>_3b', f.read(), re.DOTALL)).group(1))
+🐍

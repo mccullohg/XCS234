@@ -1,0 +1,8 @@
+\item \points{2b}
+
+For what values of $H$ does the optimal policy reach a fully stocked inventory, starting from the initial state $s = 3$? I.e. Give a range for $H$. \textit{\textbf{Note 1:} we consider the inventory fully stocked if a buy action is chosen in state $s = 9$, causing a transition to $s = 10$. This includes the last time step in the horizon.} \textit{\textbf{Note 2:} By executing only buy actions, the agent can reach $s = 10$ from $s = 3$ in $H = 7$ steps.}
+
+🐍
+import re
+with open('submission.tex') as f: print((re.search(r'% <SCPD_SUBMISSION_TAG>_2b(.*?)% <SCPD_SUBMISSION_TAG>_2b', f.read(), re.DOTALL)).group(1))
+🐍
