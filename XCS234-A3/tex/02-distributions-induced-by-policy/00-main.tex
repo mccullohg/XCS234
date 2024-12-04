@@ -1,0 +1,19 @@
+\section{Distributions induced by a policy}
+
+Suppose we have a single MDP and two policies for that MDP, $\pi$ and $\pi'$. Naturally, we are often interested in the performance of policies obtained in the MDP, quantified by $V^{\pi}$ and $V^{\pi'}$, respectively. If the reward function and transition dynamics of the underlying MDP are known to us, we can use standard methods for policy evaluation. There are many scenarios, however, where the underlying MDP model is not known and we must try to infer something about the performance of policy $\pi'$ solely based on data obtained through executing policy $\pi$ within the environment. In this problem, we will explore a classic result for quantifying the gap in performance between two policies that only requires access to data sampled from one of the policies. 
+% In many situations we are interested in comparing the performance of two policies in the same Markov decision process. This can be helpful in policy improvement algorithms, and arises in a number of theoretical analyses to understand the performance of RL including in behavioral cloning for imitation learning. In particular, we may want to do this when we have access to data gathered from executing one policy (samples of state, action, reward, next state) but we do not know the true reward or dynamics model of the MDP. In such a setting we cannot do standard tabular policy evaluation. 
+
+Consider an infinite-horizon MDP $\mathcal{M} = \langle \mathcal{S}, \mathcal{A}, \mathcal{R}, \mathcal{P}, \gamma \rangle$ and stochastic policies of the form $\pi: \mathcal{S} \rightarrow \Delta(\mathcal{A})$\footnote{For a finite set $\mathcal{X}$, $\Delta(\mathcal{X})$ refers to the set of categorical distributions with support on $\mathcal{X}$ or, equivalently, the $\Delta^{|\mathcal{X}|-1}$ probability simplex.}. Specifically, $\pi(a|s)$ refers to the probability of taking action $a$ in state $s$, and $\sum_a \pi(a|s) = 1, \text{ } \forall s$. For simplicity, we'll assume that this decision process has a single, fixed starting state $s_{0} \in \mathcal{S}$. 
+
+
+\begin{enumerate}[(a)]
+
+	\input{02-distributions-induced-by-policy/01-fixed-stochastic-policy}
+
+	\input{02-distributions-induced-by-policy/02-distributions-over-states}
+
+	\input{02-distributions-induced-by-policy/03-prove-statement}
+
+	\input{02-distributions-induced-by-policy/04-advantage-function}
+
+\end{enumerate}

@@ -1,0 +1,9 @@
+\item \points{2c}
+
+For any policy $\pi$, we define the following function $$A^\pi(s,a) = Q^\pi(s,a) - V^\pi(s).$$ Prove the following statement holds for all policies $\pi,\pi'$: $$V^\pi(s_0) - V^{\pi'}(s_0) = \frac{1}{(1-\gamma)} \mathbb{E}_{s \sim d^\pi}\left[\mathbb{E}_{a \sim \pi(s)}\left[A^{\pi'}(s,a)\right]\right].$$
+    \emph{Hint: Try adding and subtracting a term that will let you bring $A^\pi(s,a)$ into the equation}\\
+    
+🐍
+import re
+with open('submission.tex') as f: print((re.search(r'% <SCPD_SUBMISSION_TAG>_2c(.*?)% <SCPD_SUBMISSION_TAG>_2c', f.read(), re.DOTALL)).group(1))
+🐍

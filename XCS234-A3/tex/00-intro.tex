@@ -1,0 +1,52 @@
+\section{Introduction}
+
+In this assignment, we will begin implementing policy gradient methods on environments with discrete or continuous actions spaces. We will also explore variance reduction methods to allow us to improve upon the performance of the REINFORCE algorithm. \\
+
+By the end of this assignment, you should have an understanding of how to implement some of the fundamental policy gradient algorithms. You should also be able to apply variance reduction techniques to improve upon the performance of REINFORCE and to derive/discuss variance reduction in policy gradient methods. \\
+
+\textbf{Advice}
+
+\begin{itemize}
+  \item It will take time to train your policy gradient implementation across all environments for various seeds. It is worthwhile budgeting at least 12 hours for all training jobs to run to completion.
+
+  \item In this assignment, you will train your policy gradient implementation using MuJoCo (physics engine) to power the simulation environment. To learn more about MuJoCo please visit \href{https://mujoco.readthedocs.io/en/latest/overview.html}{MuJoCo Documentation}.
+
+  \item We provide ~conda~ environment for preparing development environment. However, in case there is an issue, we also provide ~docker~ environment.
+
+  \item To setup ~conda~ environment, for CPU environment use ~environment.yml~, for CUDA use ~environment_cuda.yml~. Here is the command:
+    \begin{lstlisting}
+    $ conda update -n base conda
+    $ conda env create --file environment.yml #  environment_cuda.yml for CUDA
+    \end{lstlisting}
+
+  \begin{lstlisting}
+  bin/../lib/liblapack.3.dylib' (no such file), '/usr/local/lib/liblapack.3.dylib' (no such file), '/usr/lib/liblapack.3.dylib' (no such file)
+  \end{lstlisting}
+
+
+\end{itemize}
+
+\textbf{Coding Deliverables}
+
+For this assignment, please submit the following files to gradescope to recieve points for coding questions:
+\begin{itemize}
+    \item ~src/submission/__init__.py~
+    \item ~src/submission/baseline_network.py~
+    \item ~src/submission/mlp.py~
+    \item ~src/submission/policy.py~
+    \item ~src/submission/policy_gradient.py~
+    \item ~src/submission/CartPole-v1-no-baseline-model-weights.pt~
+    \item ~src/submission/CartPole-v1-no-baseline-scores.npy~
+    \item ~src/submission/CartPole-v1-baseline-model-weights.pt~
+    \item ~src/submission/CartPole-v1-baseline-scores.npy~
+    \item ~src/submission/InvertedPendulum-v4-no-baseline-model-weights.pt~
+    \item ~src/submission/InvertedPendulum-v4-no-baseline-scores.npy~
+    \item ~src/submission/InvertedPendulum-v4-baseline-model-weights.pt~
+    \item ~src/submission/InvertedPendulum-v4-baseline-scores.npy~
+    \item ~src/submission/HalfCheetah-v4-no-baseline-model-weights.pt~
+    \item ~src/submission/HalfCheetah-v4-no-baseline-scores.npy~
+    \item ~src/submission/HalfCheetah-v4-baseline-model-weights.pt~
+    \item ~src/submission/HalfCheetah-v4-baseline-scores.npy~ \\
+\end{itemize}  
+
+\clearpage

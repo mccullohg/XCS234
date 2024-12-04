@@ -1,0 +1,10 @@
+\item \points{2b}
+
+Just as $\rho^\pi$ captures the distribution over trajectories induced by $\pi$, we can also examine the distribution over states induced by $\pi$. In particular, define the \textit{discounted, stationary state distribution} of a policy $\pi$ as $$d^\pi(s) = (1-\gamma) \sum\limits_{t=0}^\infty \gamma^t p(s_t = s),$$ where $p(s_t = s)$ denotes the probability of being in state $s$ at timestep $t$ while following policy $\pi$; your answer to the previous part should help you reason about how you might compute this value. Consider an arbitrary function $f: \mathcal{S} \times \mathcal{A} \rightarrow \mathbb{R}$. Prove the following identity: $$\mathbb{E}_{\tau \sim \rho^\pi}\left[\sum\limits_{t=0}^\infty \gamma^t f(s_t,a_t)\right] = \frac{1}{(1-\gamma)} \mathbb{E}_{s \sim d^\pi}\left[\mathbb{E}_{a \sim \pi(s)}\left[f(s,a)\right]\right] .$$ 
+	\emph{Hint: You may find it helpful to first consider how things work out for $f(s,a) = 1, \forall (s,a) \in \mathcal{S} \times \mathcal{A}$.}\\
+	\emph{Hint: What is $p(s_t=s)$?}
+
+🐍
+import re
+with open('submission.tex') as f: print((re.search(r'% <SCPD_SUBMISSION_TAG>_2b(.*?)% <SCPD_SUBMISSION_TAG>_2b', f.read(), re.DOTALL)).group(1))
+🐍

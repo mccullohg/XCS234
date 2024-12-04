@@ -1,0 +1,14 @@
+\item \points{2d}
+For any policy $\pi$, we define the following function $$A^\pi(s,a) = Q^\pi(s,a) - V^\pi(s).$$ $A^\pi(s,a)$ is known as the advantage function and shows up in a lot of policy gradient based RL algorithms, which we shall see later in the class. Intuitively, it is the additional benefit one gets from first following action $a$ and then following $\pi$, instead of always following $\pi$. Prove that the following statement holds for all policies $\pi,\pi'$: $$V^\pi(s_0) - V^{\pi'}(s_0) = \frac{1}{(1-\gamma)} \mathbb{E}_{s \sim d^\pi}\left[\mathbb{E}_{a \sim \pi(s)}\left[A^{\pi'}(s,a)\right]\right].$$
+    \emph{Hint 1: Try adding and subtracting a term that will let you bring $A^{\pi'}(s,a)$ into the equation. What happens on adding and subtracting $\sum\limits_{t=0}^\infty \gamma^{t+1} V^{\pi'}(s_{t+1})$ on the LHS?} \\
+    \emph{Hint 2: Recall the \href{https://en.wikipedia.org/wiki/Law_of_total_expectation}{tower property of expectation} which says that $\mathbb{E}\left[X\right] = \mathbb{E}\left[\mathbb{E}\left[X \mid Y\right]\right]$}.
+
+
+After proving this result, you might already begin to appreciate why this represents a useful theoretical contribution. We are often interested in being able to control the gap between two value functions and this result provides a new mechanism for doing exactly that, when the value functions in question belong to two particular policies of the MDP. 
+
+Additionally, to see how this result is of practical importance as well, suppose the data-generating policy in the above identity $\pi$ is some current policy we have in hand and $\pi'$ represents some next policy we would like to optimize for; concretely, this scenario happens quite often when $\pi$ is a neural network and $\pi'$ denotes the same network with updated parameters. As is often the case with function approximation, there are sources of instability and, sometimes, even small parameter updates can lead to drastic changes in policy performance, potentially degrading (instead of improving) the performance of the current policy $\pi$. These realities of deep learning motivate a desire to occasionally be conservative in our updates and attempt to reach a new policy $\pi'$ that provides only a modest improvement over $\pi$. Practical approaches can leverage the above identity to strike the right balance between making progress and maintaining stability. 
+
+🐍
+import re
+with open('submission.tex') as f: print((re.search(r'% <SCPD_SUBMISSION_TAG>_2d(.*?)% <SCPD_SUBMISSION_TAG>_2d', f.read(), re.DOTALL)).group(1))
+🐍
